@@ -1,0 +1,4 @@
+virsh destroy rhel9-kvm
+virsh undefine rhel9-kvm
+rm -f /var/lib/libvirt/images/rhels8-kvm9.img
+
