@@ -7,6 +7,7 @@ which virt-viewer &>/dev/null
 if [ $? -ne 0 ];then
   yum install virt-viewer -y
 fi
+sleep 4
 virt-viewer rhel8-kvm &
 ##
 # other parameter example 
