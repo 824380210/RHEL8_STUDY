@@ -1,4 +1,9 @@
+# 软件包安装
+```
+ yum install tigervnc tigervnc-server
+```
 # enable vnc in rhel8 system  
+
 ``` 
 -- Unit vncserver@:1.service has begun starting up.
 Oct 18 04:21:02 peter.cluster vncserver[32308]: vncserver: The HOME environment variable is not set.
