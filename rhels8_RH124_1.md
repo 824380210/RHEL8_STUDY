@@ -59,11 +59,67 @@ Commands:
 
 ### 语言包
 ```
-yum list langpacks-*   #
+yum list langpacks-*   # 显示已安装和可以安装的语言包
+[root@peter ~]# yum list langpacks-*
+Updating Subscription Management repositories.
+Unable to read consumer identity
+This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.
+Last metadata expiration check: 0:01:47 ago on Mon 21 Oct 2019 05:11:08 AM EDT.
+Installed Packages
+langpacks-en.noarch                                                                    1.0-12.el8                                                                 @AppStream
+Available Packages
+langpacks-af.noarch                                                                    1.0-12.el8                                                                 AppStream
+langpacks-am.noarch                                                                    1.0-12.el8                                                                 AppStream
+langpacks-ar.noarch                                                                    1.0-12.el8                                                                 AppStream
+
 yum repoquery --whatsupplements  # 查语言包中有那些RPM包
-yum info langpacks-SUFFIX
+
+[root@peter ~]# yum repoquery --whatsupplements langpacks-zh_CN
+Updating Subscription Management repositories.
+Unable to read consumer identity
+This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.
+AppStream                                                                                                                                   3.1 MB/s | 3.2 kB     00:00
+BaseOS                                                                                                                                      2.7 MB/s | 2.7 kB     00:00
+glibc-langpack-zh-0:2.28-42.el8.x86_64
+libreoffice-langpack-zh-Hans-1:6.0.6.1-13.el8.x86_64
+[root@peter ~]#
 
 
+
+yum info langpacks-SUFFIX  # 显示一些语言包信息
+
+ot@peter ~]# yum info langpacks-en
+Updating Subscription Management repositories.
+Unable to read consumer identity
+This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.
+Installed Packages
+Name         : langpacks-en
+Version      : 1.0
+Release      : 12.el8
+Arch         : noarch
+Size         : 400
+Source       : langpacks-1.0-12.el8.src.rpm
+Repo         : @System
+From repo    : AppStream
+Summary      : English langpacks meta-package
+License      : GPLv2+
+Description  : This package provides English langpacks meta-package.
+
+[root@peter ~]# yum info langpacks-zh_CN
+Updating Subscription Management repositories.
+Unable to read consumer identity
+This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.
+Available Packages
+Name         : langpacks-zh_CN
+Version      : 1.0
+Release      : 12.el8
+Arch         : noarch
+Size         : 9.6 k
+Source       : langpacks-1.0-12.el8.src.rpm
+Repo         : AppStream
+Summary      : Simplified Chinese langpacks meta-package
+License      : GPLv2+
+Description  : This package provides Simplified Chinese langpacks meta-package
 
 ```
 
